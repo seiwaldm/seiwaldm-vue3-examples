@@ -3,6 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import Counter from './components/Counter.vue';
 import Colors from './components/Colors.vue';
+import User from './components/User.vue';
 import { ref } from 'vue';
 
 const display = ref(1);
@@ -17,10 +18,14 @@ const display = ref(1);
     <button @click="display = 2" :class="{ active: display === 2 }">
       class and style binding, v-model
     </button>
+    <button @click="display = 3" :class="{ active: display === 3 }">
+      v-model with different input fields
+    </button>
   </div>
   <hr />
   <Counter v-if="display === 1"></Counter>
   <Colors v-if="display === 2"></Colors>
+  <User v-if="display === 3"></User>
 </template>
 
 <style scoped>
