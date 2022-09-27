@@ -4,6 +4,7 @@
 import Counter from "./components/Counter.vue";
 import Colors from "./components/Colors.vue";
 import User from "./components/User.vue";
+import RandomStudent from "./components/RandomStudent.vue";
 import { ref } from "vue";
 
 const display = ref(1);
@@ -26,6 +27,7 @@ const display = ref(1);
   <Counter v-if="display === 1"></Counter>
   <Colors v-if="display === 2"></Colors>
   <User v-if="display === 3"></User>
+  <RandomStudent></RandomStudent>
 </template>
 
 <style scoped>

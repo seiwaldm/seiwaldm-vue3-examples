@@ -17,7 +17,7 @@ function addUser() {
 </script>
 
 <template>
-  <h1>Hello World!</h1>
+  <h2>User.vue</h2>
   <p>{{ user.name }} is {{ user.age }} years old!</p>
   <p>{{ user.gender }} loves {{ user.checkedAnimals }}</p>
   <input type="text" v-model="user.name" />
