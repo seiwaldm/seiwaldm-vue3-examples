@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import Counter from './components/Counter.vue';
-import Colors from './components/Colors.vue';
-import User from './components/User.vue';
-import { ref } from 'vue';
+import Counter from "./components/Counter.vue";
+import Colors from "./components/Colors.vue";
+import User from "./components/User.vue";
+import { ref } from "vue";
 
 const display = ref(1);
 </script>
@@ -19,7 +19,7 @@ const display = ref(1);
       class and style binding, v-model
     </button>
     <button @click="display = 3" :class="{ active: display === 3 }">
-      v-model with different input fields
+      v-model with different input fields & list rendering
     </button>
   </div>
   <hr />

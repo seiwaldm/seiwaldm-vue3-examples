@@ -1,12 +1,19 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const user = ref({
-  name: 'Johnny',
+  name: "Johnny",
   age: 32,
-  gender: '',
+  gender: "",
   checkedAnimals: [],
 });
+
+const userList = ref([]);
+
+function addUser() {
+  userList.value.push(user.value);
+  user.value = { name: "", age: 0, gender: "", checkedAnimals: [] };
+}
 </script>
 
 <template>
@@ -37,4 +44,8 @@ const user = ref({
     />
     <label for="horse">horse</label>
   </div>
+  <button @click="addUser">Add user to the list</button>
+  <ul v-for="item in userList">
+    <li>{{ item.name }}</li>
+  </ul>
 </template>
